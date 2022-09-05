@@ -1,6 +1,6 @@
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -19,29 +19,13 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-.clearfix {
-  zoom: 1;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
 ul {
   position: relative;
   list-style-type: none;
   transform: rotate(-35deg) skew(20deg, 5deg);
 }
 
-.list-item {
+li a {
   background: #f1f1f1;
   color: #222;
   text-align: center;
@@ -56,15 +40,15 @@ ul {
   transition: all 0.25s linear;
 }
 
-.list-item:before,
-.list-item:after {
+li a::before,
+li a::after {
   content: "";
   position: absolute;
   transition: all 0.25s linear;
   width: 0.5em;
 }
 
-.list-item:after {
+li a::after {
   height: 4em;
   background: #e3dfdf;
   bottom: -2.25em;
@@ -72,7 +56,7 @@ ul {
   transform: rotate(90deg) skew(0, 45deg);
 }
 
-.list-item:before {
+li a::before {
   height: 2.5em;
   background: #ddd7d7;
   top: 0.25em;
@@ -80,7 +64,7 @@ ul {
   transform: skewY(-45deg);
 }
 
-.list-item:hover {
+li a:hover {
   background: #8e2de2;
   color: #fffcfb;
   transform: translate(0.9em, -0.9em);
@@ -88,19 +72,19 @@ ul {
   box-shadow: -2em 2em 0 #e1e1e1;
 }
 
-.list-item:hover:before,
-.list-item:hover:after {
+li a:hover::before,
+li a:hover::after {
   transition: all 0.25s linear;
 }
 
-.list-item:hover:before {
+li a:hover::before {
   background: #5d119f;
   width: 1em;
   top: 0.5em;
   left: -1em;
 }
 
-.list-item:hover:after {
+li a:hover::after {
   background: #5d119f;
   width: 1em;
   bottom: -2.5em;
